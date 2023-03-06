@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     --principal: #d7094a;
+    --secundario: #fa84a9;
 }
 body {
     background-color: #f2f2f2;
@@ -38,6 +39,11 @@ ul, li {
 .contenedor {
     max-width: 73.25rem;
     margin: 0 auto;
+}
+@media only screen and (max-width: 768px){
+    .contenedor {
+        margin: 0 20px;
+    }
 }
 /* Boton Hamburguesa */
 .hamburguesa #menu_on{
@@ -79,13 +85,13 @@ bottom: 0;
 /* Menu lateral */
 .menu-lateral{
 	position: fixed;
-	top: 0;
+	top: -200px;
 	bottom: 0;
-	left:-300px; /* Escondemos nuestro menú con un valor negativo */ 
-	width: 260px;
-	z-index: 1;
-	padding: 90px 0;
-	background: var(--principal);
+	left: 0px; /* Escondemos nuestro menú con un valor negativo */ 
+	width: 100%;
+    height: 185px;
+	padding: 90px 0 0 0;
+	background: #ffffff;
 	opacity: 0;
 	transition: all 0.75s ease;
 	font-size: 1.2em;
@@ -96,21 +102,24 @@ bottom: 0;
 	display:block;
 	text-decoration: none;
 	padding: 10px 20px;
-	color: rgba(255,255,255,0.75);
-	border-bottom: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid var(--principal);
 	transition: all ease 0.25s;
+    color: var(--principal);
+}
+.menu-lateral ul li:first-child{
+    border-top: 1px solid var(--principal);
 }
 .menu-lateral ul li a:hover{
-    background-color: #db366a;
+    background-color: var(--secundario);
 	color: rgba(255,255,255,1);
 	border-bottom-color:rgba(255,255,255,0.4);
 }
 .visible_menu .menu-lateral{
-	left: 0;
+	top: 0;
 	opacity: 1;
 }
 .visible_menu #content{
-      transform: translateX(260px);
+    transform: translatey(260px);
 }
 /* Header */
 .navbar-contenedor {
@@ -154,48 +163,13 @@ bottom: 0;
         height: 30px;
     } 
 }
-
-/*
-html
-<div class="humburguesa contenedor">
-    <div class="hamburguesa-inner">
-    </div>
-</div>
-css
-.hamburguesa {
-    min-height: 30px;
-    max-width: 50px;
+/* Inicio */
+.inicio {
+    display: inline-flex;
+    width: 100%;
 }
-.hamburguesa-inner, .hamburguesa-inner:after, .hamburguesa-inner:before {
-    background-color: var(--principal);
-    width: 40px;
-    height: 5px;
-    border-radius: 5px;
-    content: '';
-    transition-timing-function: ease;
-    transition-duration: .2s;
-    transition-property: transform,opacity;
+.inicio img{
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
 }
-.hamburguesa-inner:before {
-    top: 30px;
-    position: absolute;
-}
-.hamburguesa-inner:after {
-    top: 53px;
-    position: absolute;
-}
-@media only screen and (min-width:768px) {
-    .hamburguesa-inner {
-        display: none;
-    }
-}
-.hamburguesa.open .hamburguesa-inner {                     
-    transform: translate3d(0,10px,0) rotate(45deg);
-}
-.hamburguesa.open .hamburguesa-inner:after {
-    transform: translate3d(0,-20px,0) rotate(-90deg);
-}
-.hamburguesa.open .hamburguesa-inner:before {
-    transform: translate3d(0,-20px,0) rotate(90deg);
-}
-*/
