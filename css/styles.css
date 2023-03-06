@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mada:wght@300;500;600&family=Poppins:wght@400;600;800&display=swap');   
+*{
+    margin: 0;
+    padding: 0;
+    --principal: #d7094a;
+}
+body {
+    background-color: #f2f2f2;
+}
+.contenedor-total {
+    background-color: #ffffff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+p{
+    font-family: 'Mada', sans-serif;
+}
+a{
+    font-family: 'Mada', sans-serif;
+    font-size: 1.2rem;
+}
+ul, li {
+    list-style: none;
+}
+/* utilidades */
+.contenedor {
+    max-width: 73.25rem;
+    margin: 0 auto;
+}
+/* Boton Hamburguesa */
+.hamburguesa #menu_on{
+	display: none;
+	width:30px;
+	height: 20px;
+	position: relative;
+	z-index: 2;
+}
+.hamburguesa #menu_on span{
+	width: 100%;
+	height: 4px;
+	display: block;
+	position: absolute;
+	background: var(--principal);
+	transition: all 0.25s ease; /* Propiedades a animar | Tiempo | Tipo animación*/
+	transform-origin : 0px 100%;
+}
+.hamburguesa #menu_on span:nth-child(2){
+	top: calc(50% - 2px);
+}
+.hamburguesa #menu_on span:nth-child(3){
+bottom: 0;
+}
+.visible_menu span:nth-child(1){
+	transform: rotate(45deg) translate(-2px,1px); 
+}
+.visible_menu span:nth-child(2){
+	opacity: 0;
+}
+.visible_menu span:nth-child(3){
+	transform: rotate(-45deg) translate(-3px,3px); 
+}
+@media only screen and (max-width:768px) {
+    .hamburguesa #menu_on{
+        display: inline-block;
+    }
+}
+/* Menu lateral */
+.menu-lateral{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left:-300px; /* Escondemos nuestro menú con un valor negativo */ 
+	width: 260px;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--principal);
+	opacity: 0;
+	transition: all 0.75s ease;
+	font-size: 1.2em;
+	overflow-y: auto;
+}
+.menu-lateral ul li a{
+    margin-left: 0;
+	display:block;
+	text-decoration: none;
+	padding: 10px 20px;
+	color: rgba(255,255,255,0.75);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	transition: all ease 0.25s;
+}
+.menu-lateral ul li a:hover{
+    background-color: #db366a;
+	color: rgba(255,255,255,1);
+	border-bottom-color:rgba(255,255,255,0.4);
+}
+.visible_menu .menu-lateral{
+	left: 0;
+	opacity: 1;
+}
+.visible_menu #content{
+      transform: translateX(260px);
+}
+/* Header */
+.navbar-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a{
+    position: fixed;
+    margin: 0 15px;
+    color: var(--principal);
+    text-decoration: none;
+    position: relative;
+    transition: color .3s ease-in-out;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--principal);
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}  
+.navbar a:hover {
+    color: var(--principal);
+}
+.navbar a:hover::before {
+    transform: scaleX(1);
+} 
+.navbar a:last-child{
+    margin-right: 0;
+}
+@media only screen and (max-width:768px) {
+    .navbar a{
+        display: none;
+    }
+    .navbar a::before {
+        width: 0%;
+        height: 30px;
+    } 
+}
+
+/*
+html
+<div class="humburguesa contenedor">
+    <div class="hamburguesa-inner">
+    </div>
+</div>
+css
+.hamburguesa {
+    min-height: 30px;
+    max-width: 50px;
+}
+.hamburguesa-inner, .hamburguesa-inner:after, .hamburguesa-inner:before {
+    background-color: var(--principal);
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    content: '';
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: transform,opacity;
+}
+.hamburguesa-inner:before {
+    top: 30px;
+    position: absolute;
+}
+.hamburguesa-inner:after {
+    top: 53px;
+    position: absolute;
+}
+@media only screen and (min-width:768px) {
+    .hamburguesa-inner {
+        display: none;
+    }
+}
+.hamburguesa.open .hamburguesa-inner {                     
+    transform: translate3d(0,10px,0) rotate(45deg);
+}
+.hamburguesa.open .hamburguesa-inner:after {
+    transform: translate3d(0,-20px,0) rotate(-90deg);
+}
+.hamburguesa.open .hamburguesa-inner:before {
+    transform: translate3d(0,-20px,0) rotate(90deg);
+}
+*/
