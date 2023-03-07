@@ -51,7 +51,6 @@ ul, li {
 	width:30px;
 	height: 20px;
 	position: relative;
-	z-index: 2;
 }
 .hamburguesa #menu_on span{
 	width: 100%;
@@ -85,18 +84,17 @@ bottom: 0;
 /* Menu lateral */
 .menu-lateral{
 	position: fixed;
-	top: -200px;
+	top: -200px;/* Escondemos nuestro menú con un valor negativo */ 
 	bottom: 0;
-	left: 0px; /* Escondemos nuestro menú con un valor negativo */ 
+    right: 0; 
 	width: 100%;
     height: 185px;
 	padding: 90px 0 0 0;
 	background: #ffffff;
 	opacity: 0;
-	transition: all 0.75s ease;
+	transition: all .5s ease;
 	font-size: 1.2em;
 	overflow-y: auto;
-    z-index: -1;
 }
 .menu-lateral ul li a{
     margin-left: 0;
@@ -106,6 +104,7 @@ bottom: 0;
 	border-bottom: 1px solid var(--principal);
 	transition: all ease 0.25s;
     color: var(--principal);
+    text-align: center;
 }
 .menu-lateral ul li:first-child{
     border-top: 1px solid var(--principal);
@@ -127,13 +126,25 @@ bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position:fixed;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    z-index: 1;
+}
+@media only screen and (min-width:1400px) {
+    .navbar-contenedor {
+        width: 80%;
+    }
+    .navbar a {
+        right: -150px;
+    }
 }
 .navbar a{
-    position: fixed;
+    position: relative;
     margin: 0 15px;
     color: var(--principal);
     text-decoration: none;
-    position: relative;
     transition: color .3s ease-in-out;
 }
 .navbar a::before {
@@ -166,10 +177,12 @@ bottom: 0;
 }
 /* Inicio */
 .inicio {
+    padding-top: 85px;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    z-index: -1;
 }
 .inicio img:first-child{
     flex: 0 0 60%;
