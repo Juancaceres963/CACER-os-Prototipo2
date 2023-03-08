@@ -285,7 +285,7 @@ button {
 }
 /* Frutos secos */
 .frutos-secos {
-  background-image: url(../img/frutos-secos-oscuro.jpg);
+  background-image: url(https://res.cloudinary.com/dahz5phaf/image/upload/v1678303410/frutos-secos-oscuro_nupm2n.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
@@ -485,4 +485,7 @@ button {
 }
 .copyrigth p{
     margin: auto;
+}
+.copyrigth p span{
+    color: #ffffff;
 }
