@@ -41,6 +41,8 @@ a {
 }
 ul,
 li {
+  Padding: 0;
+  margin: 0;
   list-style: none;
 }
 button {
@@ -129,13 +131,18 @@ button {
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 185px;
-  padding: 90px 0 0 0;
+  height: 285px;
+  padding: 85px 0 0 0;
   background: #ffffff;
   opacity: 0;
   transition: all 0.5s ease;
   font-size: 1.2em;
   overflow-y: auto;
+  z-index: 1;
+}
+.menu-lateral ul {
+    margin: 0;
+    padding: 0;
 }
 .menu-lateral ul li a {
   margin-left: 0;
@@ -172,7 +179,7 @@ button {
   max-width: 1400px;
   height: auto;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: auto;
 }
@@ -356,6 +363,13 @@ button {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 2.3rem;
+  transition: all .3s ease;
+}
+.contenido-publicidad h2:hover{
+    padding: 30px;
+    font-size: 2.6rem;
+    font-weight: 600;
+    transition: all .3s ease;
 }
 @media only screen and (max-width: 768px){
     .publicidad{
@@ -363,6 +377,9 @@ button {
     }
     .contenido-publicidad h2{
         font-size: 1.5rem;
+    }
+    .contenido-publicidad h2:hover{
+        font-size: 1.8rem;
     }
   }
 /* Testimoniales */
@@ -405,4 +422,67 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+/* Footer */
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--principal);
+    padding: 30px 0;
+}
+.contacto {
+    display: block;
+    padding: 20px;
+}
+.texto-contacto {
+    text-align: center;
+    color: #ffffff;
+}
+.contenedor-footer .redes-sociales{
+    flex: 0 0 30%;
+}
+.contenedor-footer .texto {
+    flex: 0 0 30%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media only screen and (max-width: 768px){
+    .contenedor-footer {
+        display: block;
+    }
+}
+.red-social a {
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: all .3s ease;
+}
+.red-social a:hover{
+    transition: all .3s ease;
+    background-color: #ffffff;
+    padding: 10px;
+    color: var(--principal);
+}
+.texto h3 {
+    color: #ffffff;
+}
+.copyrigth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #bd0e45;
+}
+.copyrigth p{
+    margin: auto;
 }
