@@ -488,3 +488,20 @@ button {
 .copyrigth p span{
     color: #ffffff;
 }
+
+/* Otras paginas */
+
+/* Productos */
+.carrousel-pequeño {
+  margin-top: 70px;
+  height: auto;
+  max-height: 350px;
+}
+.carrousel-pequeño .carousel-item{
+  top: -80px;
+}
+@media only screen and (max-width: 768px){
+  .carrousel-pequeño .carousel-item{
+    top: 0px;
+  }
+}
