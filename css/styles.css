@@ -2,12 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  --principal: #d7094a;
-  --secundario: #fa84a9;
-  --terciario: #f3fca6;
-}
-body {
-  background-color: #f2f2f2;
+  --principal: #C6CD6F;
+  --terciario: #4B4E2A;
 }
 main {
   padding: 10px 0 30px 0;
@@ -65,20 +61,23 @@ button {
   font-size: 2.2rem;
   margin: 30px 0;
   border-bottom: 4px solid var(--principal);
+  text-transform: uppercase;
+  padding-bottom: 8px;
 }
 .boton {
   padding: 10px 30px;
-  border: 2px solid var(--principal);
+  border: 2px solid var(--terciario);
   border-radius: 5px;
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
-  color: var(--principal);
+  color: var(--terciario);
   transition: all 0.25s ease;
 }
 .boton:hover {
+  border-color: var(--principal);
   background-color: var(--principal);
   color: #ffffff;
   transition: all 0.25s ease;
@@ -100,7 +99,7 @@ button {
   height: 4px;
   display: block;
   position: absolute;
-  background: var(--principal);
+  background: var(--terciario);
   transition: all 0.25s ease; /* Propiedades a animar | Tiempo | Tipo animación*/
   transform-origin: 0px 100%;
 }
@@ -149,16 +148,16 @@ button {
   display: block;
   text-decoration: none;
   padding: 10px 20px;
-  border-bottom: 1px solid var(--principal);
+  border-bottom: 1px solid var(--terciario);
   transition: all ease 0.25s;
-  color: var(--principal);
+  color: var(--terciario);
   text-align: center;
 }
 .menu-lateral ul li:first-child {
-  border-top: 1px solid var(--principal);
+  border-top: 1px solid var(--terciario);
 }
 .menu-lateral ul li a:hover {
-  background-color: var(--secundario);
+  background-color: var(--principal);
   color: rgba(255, 255, 255, 1);
   border-bottom-color: rgba(255, 255, 255, 0.4);
 }
@@ -177,16 +176,19 @@ button {
   position: fixed;
   width: 100%;
   max-width: 1400px;
-  height: auto;
+  height: 70px;
   background-color: #ffffff;
   z-index: 2;
   top: 0;
   left: auto;
 }
+.logo img {
+  max-height: 40px;
+}
 .navbar a {
   position: relative;
   margin: 0 15px;
-  color: var(--principal);
+  color: var(--terciario);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -199,9 +201,6 @@ button {
   background-color: var(--principal);
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
-}
-.navbar a:hover {
-  color: var(--principal);
 }
 .navbar a:hover::before {
   transform: scaleX(1);
@@ -220,7 +219,7 @@ button {
 }
 /* Inicio */
 .inicio {
-  padding-top: 85px;
+  padding-top: 70px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -321,6 +320,7 @@ button {
 .producto img:hover {
   height: 290px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .producto h3 {
   text-align: center;
@@ -387,12 +387,11 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 .testimonial {
     width: 30%;
     min-width: 330px;
-    border: 1px solid var(--principal);
+    border: 1px solid var(--terciario);
     border-radius: 0 30px 30px 30px;
     margin: 15px auto;
     transition: all .3s ease;
@@ -401,7 +400,7 @@ button {
     align-items: center;
 }
 .testimonial:hover {
-    background-color: var(--principal);
+    background-color: var(--terciario);
     color: #ffffff;
     transition: all .3s ease;
 }
@@ -471,7 +470,7 @@ button {
     transition: all .3s ease;
     background-color: #ffffff;
     padding: 10px;
-    color: var(--principal);
+    color: var(--terciario);
 }
 .texto h3 {
     color: #ffffff;
@@ -481,7 +480,7 @@ button {
     justify-content: center;
     align-items: center;
     height: 30px;
-    background-color: #bd0e45;
+    background-color: var(--terciario);
 }
 .copyrigth p{
     margin: auto;
