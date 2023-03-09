@@ -5,6 +5,7 @@
   --principal: #C6CD6F;
   --secundario: #ebecd6;
   --terciario: #4B4E2A;
+  --secundarioLetras: #585858;
 }
 main {
   padding: 10px 0 30px 0;
@@ -252,7 +253,7 @@ button {
 @media only screen and (min-width: 1000px) {
   .inicio {
     flex-direction: row;
-    height: 400px;
+    height: 350px;
   }
   .inicio img {
     width: 100%;
@@ -440,7 +441,7 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 30px 0;
+    padding: 0 0 30px 0;
 }
 .contacto {
     display: block;
@@ -458,13 +459,20 @@ button {
     max-width: 350px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     padding: 0 10px;
+}
+@media only screen and (max-width: 768px){
+  .contenedor-footer .texto {
+    margin: 0 auto;
+  }
 }
 .redes-sociales{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 5px auto 0 auto;
+    max-width: 330px;
 }
 @media only screen and (max-width: 768px){
     .contenedor-footer {
@@ -505,12 +513,53 @@ button {
 /* Productos */
 .carousel-inner{
   height: auto;
-  max-height: 550px;
+  max-height: 400px;
 }
 @media only screen and (max-width: 768px){
   .carrousel-pequeño .carousel-item{
     top: 0px;
   }
+}
+.carousel-item img{
+  height: 100%;
+}
+/* blog */
+.blog {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.entrada-blog {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type {
+  margin-bottom: 0;
+}
+.entrada-blog .imagen{
+  flex-basis: 40%;
+}
+.entrada-blog .texto-entrada {
+  flex-basis: calc(60% - 3rem);
+}
+.entrada-blog .texto-entrada A {
+  text-decoration: none;
+}
+.entrada-blog .texto-entrada h4 {
+  color: var(--secundarioLetras);
+  margin: 0;
+  line-height: 1.4;
+}
+.texto-entrada h4::after {
+  content: '';
+  display: block;
+  width: 15rem;
+  height: .4rem;
+  background-color: var(--principal);
+  margin-top: 1rem;
+}
+.texto-entrada span {
+  color: #e08709;
 }
 /* Contacto */
 .contenedor-form {
