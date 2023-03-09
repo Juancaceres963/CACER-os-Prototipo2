@@ -159,7 +159,7 @@ button {
 .menu-lateral ul li a:hover {
   background-color: var(--principal);
   color: rgba(255, 255, 255, 1);
-  border-bottom-color: rgba(255, 255, 255, 0.4);
+  border-bottom-color: var(--terciario);
 }
 .visible_menu .menu-lateral {
   top: 0;
