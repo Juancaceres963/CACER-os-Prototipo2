@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CACER'os</title>
     <link
-    rel="shortcut icon"
-    href="https://res.cloudinary.com/dahz5phaf/image/upload/v1678716965/Logo-peque%C3%B1o_ym9ly6_vn3rig.png"
-  />    <link rel="stylesheet" href="../css/styles.css" />
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/dahz5phaf/image/upload/v1678716965/Logo-peque%C3%B1o_ym9ly6_vn3rig.png"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,7 +21,10 @@
     <div class="contenedor-total">
       <header class="navbar-contenedor">
         <div class="logo">
-          <a href="../index.html"><img src="https://res.cloudinary.com/dahz5phaf/image/upload/v1678366861/Logo_Black_uasogm.png" /></a>
+          <a href="../index.html"
+            ><img
+              src="https://res.cloudinary.com/dahz5phaf/image/upload/v1678366861/Logo_Black_uasogm.png"
+          /></a>
         </div>
         <div class="navbar">
           <nav>
@@ -51,56 +55,190 @@
       </nav>
       <!-- Esta por fuera para que se pueda hubicar detras del nav pero por encima del inicio -->
       <!--Main Productos-->
-      <main>
-        <div class="inicio-paginas"></div>
-        <div class="">
-            <div class="inicio-producto">
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img
-                          src="https://res.cloudinary.com/dahz5phaf/image/upload/v1678376836/linea-producto_qrz50s.jpg"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="https://png.pngtree.com/background/20210710/original/pngtree-event-promotion-wind-taobao-yogurt-poster-picture-image_1040966.jpg"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="carousel-item">
-                        <img
-                          src="https://media.istockphoto.com/photos/yogurt-background-with-almonds-yogurt-texture-top-view-picture-id1124357307?s=2048x2048"
-                          class="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <button
-                      class="carousel-control-prev"
-                      type="button"
-                      data-bs-target="#carouselExample"
-                      data-bs-slide="prev"
-                    >
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                      class="carousel-control-next"
-                      type="button"
-                      data-bs-target="#carouselExample"
-                      data-bs-slide="next"
-                    >
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  <h2 class="subtitulo">Nuestros productos</h2>
-                  
+      <div class="inicio-paginas"></div>
+      <div class="inicio-producto">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://res.cloudinary.com/dahz5phaf/image/upload/v1678376836/linea-producto_qrz50s.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
+            <div class="carousel-item">
+              <img
+                src="https://png.pngtree.com/background/20210710/original/pngtree-event-promotion-wind-taobao-yogurt-poster-picture-image_1040966.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://media.istockphoto.com/photos/yogurt-background-with-almonds-yogurt-texture-top-view-picture-id1124357307?s=2048x2048"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <main>
+        <h2 class="subtitulo">Nuestros productos</h2>
+        <form class="barra-buscadora">
+          <div class="barra">
+            <label for="search"></label>
+            <input type="text" id="search" name="search" placeholder="Que estas buscando?"/>
+          </div>
+          <button class="boton" type="submit">Buscar</button>
+        </form>
+        <div class="contenedor">
+          <ul id="product-list" class="product-list">
+            <li
+              class="product"
+              data-name="fresa"
+              data-description="yougurt sabor a fresa"
+              data-price="10"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 1"
+              />
+              <h3>Yougurt Fresa</h3>
+              <p>Price: $10</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="durazno"
+              data-description="yougurt sabor a durazno"
+              data-price="20"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 2"
+              />
+              <h3>Yougurt Durazno</h3>
+              <p>Price: $20</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="piña"
+              data-description="yougurt sabor a piña"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Yougurt Piña</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="fresa"
+              data-description="yougurt firme fresa"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Yougurt firme Fresa</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="durazno"
+              data-description="Yougurt firme durazno"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Yougurt firme Durazno</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="piña"
+              data-description="Yougurt firme Piña"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Yougurt firme Piña</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="fresa"
+              data-description="bebida lactea fresa"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Bebida lactea Fresa</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="durazno"
+              data-description="Bebida lactea durazno"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Bebida lactea durazno</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+            <li
+              class="product"
+              data-name="piña"
+              data-description="Bebida lactea Piña"
+              data-price="30"
+            >
+              <img
+                src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
+                alt="Product 3"
+              />
+              <h3>Bebida lactea Piña</h3>
+              <p>Price: $30</p>
+              <button class="comprar boton">Comprar</button>
+            </li>
+          </ul>
         </div>
       </main>
       <div class="final-paginas"></div>
@@ -149,8 +287,8 @@
       </footer>
       <div class="copyrigth">
         <p>
-          Todos los derechos Reservados <span>CACER'os
-            <i class="fa-regular fa-copyright"></i></span> 
+          Todos los derechos Reservados
+          <span>CACER'os <i class="fa-regular fa-copyright"></i></span>
         </p>
       </div>
     </div>
