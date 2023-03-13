@@ -526,18 +526,32 @@ button {
 /* blog */
 .blog {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 650px;
 }
 .entrada-blog {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 2rem;
+  border: 1px solid var(--terciario);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all .3s ease;
+}
+.entrada-blog:hover{
+  transition: all .3s ease;
+  scale: 1.1;
+  box-shadow: 0 0 10px;
 }
 .entrada-blog:last-of-type {
   margin-bottom: 0;
 }
 .entrada-blog .imagen{
   flex-basis: 40%;
+}
+.entrada-blog .imagen img{
+  max-width: 270px;
+  height: 100%;
 }
 .entrada-blog .texto-entrada {
   flex-basis: calc(60% - 3rem);
@@ -548,7 +562,7 @@ button {
 .entrada-blog .texto-entrada h4 {
   color: var(--secundarioLetras);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .texto-entrada h4::after {
   content: '';
@@ -556,10 +570,37 @@ button {
   width: 15rem;
   height: .4rem;
   background-color: var(--principal);
-  margin-top: 1rem;
+  margin-top: .5rem;
+}
+.entrada-blog .texto-entrada p {
+  margin-bottom: 0;
+}
+.entrada-blog .texto-entrada p:nth-child(2) {
+  margin-bottom: .4rem;
 }
 .texto-entrada span {
   color: #e08709;
+}
+@media only screen and (max-width: 768px){
+  .blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .entrada-blog{
+    flex-direction: column;
+    max-width: 330px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  .entrada-blog .imagen{
+    flex-basis: 100%;
+  }
+  .entrada-blog .texto-entrada {
+    flex-basis: 100%;
+  }
 }
 /* Contacto */
 .contenedor-form {
@@ -568,11 +609,10 @@ button {
 }
 .contacto legend {
   padding: 0 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #585858;
 }
-
 .contacto p {
   font-size: 1.4rem;
   color: #333333;
@@ -598,22 +638,18 @@ textarea {
   border: none;
   border-radius: 1rem;
   }
-
 input[type="radio"]{
   margin: 0;
 }
-
 .forma-contacto {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 30rem;
 }
-
 .forma-contacto label {
   width: 100%;
 }
-
 select {
   --webkit-appearance: none;
   appearance: none ;
