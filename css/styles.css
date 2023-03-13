@@ -6,6 +6,7 @@
   --secundario: #ebecd6;
   --terciario: #4B4E2A;
   --secundarioLetras: #585858;
+  --terciarioLetras: #e08709;
 }
 main {
   padding: 10px 0 30px 0;
@@ -100,6 +101,15 @@ button {
 .final-paginas{
   background-image: url(../img/paginas/green-girada.jpg);
   height: 120px;
+}
+.precio {
+  font-size: 1.2rem;
+}
+.precio.grande{
+  font-size: 1.4rem;
+} 
+.precio span {
+  color: var(--terciarioLetras);
 }
 /* Boton Hamburguesa */
 .hamburguesa #menu_on {
@@ -585,6 +595,31 @@ button {
 .product[style*="none"] {
   display: none;
 }
+/* Pagina de producto (individual) */
+.info-producto-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-producto-principal img {
+  flex-basis: 50%;
+  min-width: 200px;
+}
+.info-producto-principal .texto-producto{
+  flex-basis: calc(50% - 3rem);
+}
+@media only screen and (max-width:768px){
+  .info-producto-principal {
+    flex-direction: column;
+    margin: 0 30px;
+  }
+  .info-producto-principal img{
+    max-height: 430px;
+  }
+  .texto-producto {
+    text-align: center;
+  }
+}
 /* blog */
 .blog {
   margin: 0 auto;
@@ -641,7 +676,7 @@ button {
   margin-bottom: .4rem;
 }
 .texto-entrada span {
-  color: #e08709;
+  color: var(--terciarioLetras);
 }
 @media only screen and (max-width: 768px){
   .blog {
