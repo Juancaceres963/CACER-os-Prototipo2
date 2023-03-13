@@ -60,8 +60,8 @@ button {
   margin: 30px 0;
   border-bottom: 4px solid var(--principal);
   text-transform: uppercase;
-  padding-bottom: 8px;
   text-align: center;
+  padding: 0 20px 8px 20px;
 }
 .boton {
   padding: 10px 30px;
@@ -83,6 +83,10 @@ button {
 }
 .boton-centrado {
   display: flex;
+}
+.botones {
+  display: flex;
+  justify-content: space-around;
 }
 .centro {
   display: flex;
@@ -536,6 +540,8 @@ button {
 }
 .carousel-item img{
   height: 100%;
+  object-fit: cover;
+  min-height: 400px;
 }
 .barra-buscadora {
   display: flex;
@@ -661,6 +667,9 @@ button {
   margin: 0;
   line-height: 1.2;
 }
+.entrada-blog .texto-entrada h4:hover {
+  color: var(--principal);
+}
 .texto-entrada h4::after {
   content: '';
   display: block;
@@ -691,12 +700,14 @@ button {
     justify-content: center;
     align-items: center;
     margin-bottom: 35px;
+    padding: 20px;
   }
   .entrada-blog .imagen{
     flex-basis: 100%;
   }
   .entrada-blog .texto-entrada {
     flex-basis: 100%;
+    padding-top: 20px;
   }
 }
 /* Pagina-blog (individual) */
