@@ -621,12 +621,11 @@ button {
 .contacto p:last-of-type {
   margin-top: 2rem;
 }
-
 label {
   display: block;
   text-transform: uppercase;
+  padding-left: 15px;
 }
-
 input:not([type="submit"]),
 select,
 textarea {
@@ -638,6 +637,9 @@ textarea {
   border: none;
   border-radius: 1rem;
   }
+.text-area {
+  margin-bottom: 15px;
+}
 input[type="radio"]{
   margin: 0;
 }
@@ -653,4 +655,16 @@ input[type="radio"]{
 select {
   --webkit-appearance: none;
   appearance: none ;
+}
+@media only screen and (max-width: 768px) {
+  .contacto legend {
+    font-size: 1.5rem;
+  }
+  label {
+    font-size: .9rem;
+  }
+  .contacto p {
+    padding: 0 15px;
+    font-size: 1.2rem;
+  }
 }
