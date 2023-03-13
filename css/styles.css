@@ -80,6 +80,9 @@ button {
   color: #ffffff;
   transition: all 0.25s ease;
 }
+.boton-centrado {
+  display: flex;
+}
 .centro {
   display: flex;
   justify-content: center;
