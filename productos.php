@@ -1,61 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CACER'os</title>
-    <link
-      rel="shortcut icon"
-      href="https://res.cloudinary.com/dahz5phaf/image/upload/v1678716965/Logo-peque%C3%B1o_ym9ly6_vn3rig.png"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="contenedor-total">
-      <header class="navbar-contenedor">
-        <div class="logo">
-          <a href="../index.html"
-            ><img
-              src="https://res.cloudinary.com/dahz5phaf/image/upload/v1678366861/Logo_Black_uasogm.png"
-          /></a>
-        </div>
-        <div class="navbar">
-          <nav>
-            <!--Menu que se despliega horizontalmente-->
-            <a href="../paginas/productos.html">Productos</a>
-            <a href="../paginas/nosotros.html">Sobre Nosotros</a>
-            <a href="../paginas/blog-recetas.html">Blogs y Recetas</a>
-            <a href="../paginas/contacto.html">Contacto</a>
-          </nav>
-          <div class="hamburguesa">
-            <!--Tres rayas que aparecen cuando la pantalla es menor a 768px-->
-            <a href="#" id="menu_on">
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </div>
-        </div>
-      </header>
-      <nav class="menu-lateral">
-        <!--Menu que se despliega lateralmente al oprimir el menu de hamburguesa-->
-        <ul>
-          <li><a href="../paginas/productos.html">Productos</a></li>
-          <li><a href="../paginas/nosotros.html">Sobre Nosotros</a></li>
-          <li><a href="../paginas/blog-recetas.html">Blogs y Recetas</a></li>
-          <li><a href="../paginas/contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- Esta por fuera para que se pueda hubicar detras del nav pero por encima del inicio -->
-      <!--Main Productos-->
-      <div class="inicio-paginas"></div>
+<?php include_once "./includes/templates/header.php"; ?>
       <div class="inicio-producto">
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
@@ -124,7 +67,7 @@
               data-description="220 ml pequeño"
               data-price="10"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
                   alt="Product 1"
@@ -138,7 +81,7 @@
               data-description="460 ml mediano"
               data-price="20"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="https://www.gloria.com.pe/uploads/products/lacteos/2022092816643925731.jpg"
                   alt="Product 2"
@@ -152,7 +95,7 @@
               data-description="1.5 Litros grande"
               data-price="30"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm_VDQoSFWuUSd3Wnha-8bcnyaXxTUZlXs2x_pEMasO7JRVbJ-vycZDR-S6_HtxmKRT4&usqp=CAU"
                   alt="Product 3"
@@ -167,7 +110,7 @@
               data-description="220 ml pequeño"
               data-price="10"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
                   alt="Product 1"
@@ -181,7 +124,7 @@
               data-description="460 ml mediano"
               data-price="20"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="https://www.gloria.com.pe/uploads/products/lacteos/2022092816643925731.jpg"
                   alt="Product 2"
@@ -195,7 +138,7 @@
               data-description="1.5 Litros grande"
               data-price="30"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm_VDQoSFWuUSd3Wnha-8bcnyaXxTUZlXs2x_pEMasO7JRVbJ-vycZDR-S6_HtxmKRT4&usqp=CAU"
                   alt="Product 3"
@@ -210,7 +153,7 @@
               data-description="220 ml pequeño"
               data-price="10"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="http://d2r9epyceweg5n.cloudfront.net/stores/001/151/835/products/77913376060291-2568a8a9c8d1c1858816524061590947-640-0.jpg"
                   alt="Product 1"
@@ -224,7 +167,7 @@
               data-description="460 ml mediano"
               data-price="20"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="https://www.gloria.com.pe/uploads/products/lacteos/2022092816643925731.jpg"
                   alt="Product 2"
@@ -238,7 +181,7 @@
               data-description="1.5 litros grande"
               data-price="30"
             >
-              <a href="./producto.html"
+              <a href="./producto.php"
                 ><img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm_VDQoSFWuUSd3Wnha-8bcnyaXxTUZlXs2x_pEMasO7JRVbJ-vycZDR-S6_HtxmKRT4&usqp=CAU"
                   alt="Product 3"
@@ -249,71 +192,4 @@
           </ul>
         </div>
       </main>
-      <div class="final-paginas"></div>
-      <footer id="contacto" class="footer-principal">
-        <div class="contenedor-footer contenedor">
-          <div class="contacto">
-            <div class="texto-contacto">
-              <p>
-                Puedes contactarnos atraves de las siguientes redes sociales.
-              </p>
-            </div>
-            <div class="redes-sociales">
-              <div class="red-social correo">
-                <a href=""><i class="fa-regular fa-envelope"></i></a>
-              </div>
-              <div class="red-social whatssap">
-                <a
-                  target="_blank"
-                  href="https://api.whatsapp.com/send?phone=+573008559985&text=Buenas tardes me gustaria hacer un pedido"
-                  ><i class="fa-brands fa-whatsapp"></i
-                ></a>
-              </div>
-              <div class="red-social">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-              </div>
-              <div class="red-social facebook">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="texto">
-            <h3>CACER'os Company</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
-              neque quam maiores quae, cupiditate officia! Incidunt, magni
-              dolore ea aperiam beatae placeat. Harum pariatur asperiores quae
-              veniam illo est.
-            </p>
-          </div>
-          <div class="texto">
-            <h3>CACER'os Company</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sed
-              neque quam maiores quae, cupiditate officia! Incidunt, magni
-              dolore ea aperiam beatae placeat. Harum pariatur asperiores quae
-              veniam illo est.
-            </p>
-          </div>
-        </div>
-      </footer>
-      <div class="copyrigth">
-        <p>
-          Todos los derechos Reservados
-          <span>CACER'os <i class="fa-regular fa-copyright"></i></span>
-        </p>
-      </div>
-    </div>
-    <script
-      src="https://kit.fontawesome.com/a4f9efcdf1.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/jquey.js"></script>
-    <script src="../js/scripts.js"></script>
-  </body>
-</html>
+      <?php include_once "./includes/templates/footer.php"; ?>
