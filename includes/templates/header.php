@@ -32,6 +32,7 @@
             <a href="./productos.php">Productos</a>
             <a href="./nosotros.php">Sobre Nosotros</a>
             <a href="./blog-recetas.php">Blogs y Recetas</a>
+            <a href="./calendario.php">Calendario</a>
             <a href="./contacto.php">Contacto</a>
           </nav>
           <div class="hamburguesa">
