@@ -20,11 +20,26 @@
 
     <div class="calendario">
         <?php
-        while ( $eventos = $resultado->fetch(PDO::FETCH_ASSOC) ) { ?> <!--4) Imprimimos los resultados -->
+        $calendario = array();
+        while ( $eventos = $resultado->fetch(PDO::FETCH_ASSOC) ) {  //4) Imprimimos los resultados
+            $fecha = $eventos['fecha_evento'];
+            
+            $evento = array(
+                'titulo' => $eventos['nombre_evento'],
+                'fecha' => $eventos['fecha_evento'],
+                'hora' => $eventos['hora_evento'],
+                'categoria' => $eventos['cat_evento'],
+                'invitado' => $eventos['nombre_invitado'] . ' ' . $eventos['apellido_invitado']
+            );
+
+            $calendario[$fecha][] = $evento;
+
+            ?>
+            <?php } ?> <!-- FETCH_ASSOC -->
+
             <pre>
-                <?php var_dump($eventos); ?> <!-- var_dump es lo que nos permitira imprimir los resultados -->
+                <?php var_dump($calendario); ?> <!-- var_dump es lo que nos permitira imprimir los resultados -->
             </pre>
-            <?php } ?>
     </div>
 
     <?php
