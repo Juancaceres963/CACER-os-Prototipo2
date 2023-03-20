@@ -1,6 +1,5 @@
 <?php include_once "./includes/templates/header.php"; ?>
       <main>
-        <div class="inicio-paginas"></div>
         <h2 class="subtitulo">Planilla de contacto</h2>
         <div class="contenedor contenedor-form">
           <form action="" class="contacto">

@@ -37,6 +37,22 @@
             ?>
             <?php } ?> <!-- FETCH_ASSOC -->
 
+            <?php 
+                // Imprimir las fechas de los enventos 
+                foreach($calendario as $dia => $lista_eventos) { ?>
+                <h3>
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <?php 
+                    //Unix
+                    setlocale(LC_TIME, "es_ES.UTF-8");
+                    // Windows 
+                    setlocale(LC_TIME, "spanish.UTF-8");
+                    
+                    echo strftime( "%A %d de %B del %Y", strtotime($dia) );?>
+                </h3>
+               <?php }  ?>
+
+
             <pre>
                 <?php var_dump($calendario); ?> <!-- var_dump es lo que nos permitira imprimir los resultados -->
             </pre>
